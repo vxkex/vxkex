@@ -15,25 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.c">
+    <ClCompile Include="dllmain.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="cmdline.c">
+    <ClCompile Include="forwards.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="version.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="util.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="gui.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="perform.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="prereq.c">
+    <ClCompile Include="factory.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,24 +29,18 @@
     <ClInclude Include="buildcfg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="kexsetup.h">
+    <ClInclude Include="kxdwp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="KexSetup.rc">
+    <ResourceCompile Include="kxdw.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="KexSetup.ico">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="VxKexNEXT.ico">
-      <Filter>Resource Files</Filter>
+    <None Include="kxdw.def">
+      <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
 </Project>
