@@ -4,7 +4,7 @@
 ## dotexe 1337 changes applied
 
 # Goal
-## Collecting and merging all vxkex forks in one complete edit
+## Collecting and merging all vxkex forks in one complete edition
 
 Introduction
 ============
