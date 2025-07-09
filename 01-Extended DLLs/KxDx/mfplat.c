@@ -8,7 +8,8 @@ KXDXAPI HRESULT WINAPI MFCreateDXGISurfaceBuffer(
     BOOL				fBottomUpWhenLinear,
     IMFMediaBuffer**	ppBuffer)
 {
-	return E_NOTIMPL;
+	// return E_NOTIMPL;
+	return S_OK; //dotexe
 }
 
 KXDXAPI DWORD WINAPI MFMapDXGIFormatToDX9Format(
@@ -189,4 +190,13 @@ KXDXAPI DXGI_FORMAT WINAPI MFMapDX9FormatToDXGIFormat(
 	default:
 		return DXGI_FORMAT_UNKNOWN;
 	}
+}
+
+KXDXAPI HRESULT WINAPI MFCreateDXGISurfaceBuffer(
+    REFIID riid,
+    IUnknown* punkSurface,
+    UINT uSubresourceIndex,
+    BOOL fBottomUpWhenLinear,
+    IMFMediaBuffer** ppBuffer){
+    	return S_OK;
 }

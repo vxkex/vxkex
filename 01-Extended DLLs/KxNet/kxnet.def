@@ -1,5 +1,8 @@
 LIBRARY KxNet
 EXPORTS
+	;; addr.c
+	GetAddrInfoExOverlappedResult
+
 	;; dns.c
 	DnsQueryEx
 	DnsServiceBrowse
@@ -10,8 +13,17 @@ EXPORTS
 	WinHttpGetProxyForUrlEx
 	WinHttpGetProxyResult
 	WinHttpFreeProxyResult
+	WinHttpWebSocketCompleteUpgrade
+	WinHttpWebSocketReceive
+	WinHttpWebSocketSend
+	WinHttpWebSocketClose
+	WinHttpWebSocketShutdown
 
 	;; winsock.c
 	GetHostNameW
 	getaddrinfo = Ext_getaddrinfo
 	GetAddrInfoExCancel
+	
+	;; domain.c
+	NetFreeAadJoinInformation
+	NetGetAadJoinInformation

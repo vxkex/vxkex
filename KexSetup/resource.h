@@ -18,7 +18,7 @@
 #define IDHDRSUBTEXT				106
 #define IDPROGRESS					107
 
-#define IDI_VXKEXNEXTICON			108
+#define IDI_VxKexICON			108
 
 #define IDS1GUIDETEXT				110
 #define IDS1DIRPATH					111

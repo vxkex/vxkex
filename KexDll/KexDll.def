@@ -16,6 +16,7 @@ EXPORTS
 	KexRtlFindUnicodeSubstring
 	KexRtlAdvanceUnicodeString
 	KexRtlRetreatUnicodeString
+	KexRtlSetUnicodeStringBufferEnd
 	KexRtlShiftUnicodeString
 	KexRtlWriteProcessMemory
 	KexRtlCreateDirectoryRecursive
@@ -33,6 +34,7 @@ EXPORTS
 	KexRtlNullTerminateUnicodeString
 	KexRtlCreateUntrustedDirectoryObject
 	KexRtlGenerateRandomData
+	KexRtlGrowFunctionTable
 
 	KexRtlWow64GetProcessMachines
 	KexRtlSetBit

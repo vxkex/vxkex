@@ -1052,3 +1052,11 @@ KEXAPI VOID NTAPI KexRtlDeleteGrowableFunctionTable(
 	return;
 #endif
 }
+
+KEXAPI VOID NTAPI KexRtlGrowFunctionTable(
+	PVOID DynamicTable,
+	IN DWORD NewEntryCount)
+{
+	//TODO: Implement
+	return;
+}

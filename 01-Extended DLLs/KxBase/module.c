@@ -30,6 +30,7 @@
 
 #include "buildcfg.h"
 #include "kxbasep.h"
+#include "KexDll.h"
 #include <KexW32ML.h>
 #include <Shlwapi.h>
 
@@ -118,6 +119,31 @@ KXBASEAPI HMODULE WINAPI Ext_GetModuleHandleA(
 	InterceptedKernelBaseLoaderCallReturn(ReEntrant);
 
 	return ModuleHandle;
+}
+
+KXBASEAPI FARPROC WINAPI Ext_GetProcAddress(
+	IN  HMODULE hModule,
+	IN  LPCSTR lpProcName)
+{
+	PPEB Peb;
+	Peb = NtCurrentPeb();
+
+	//
+	// APPSPECIFICHACK: Our VirtualAlloc2 cannot yet handle the AllocationType(s) needed
+	// by the Chromium V8 sandbox, and Chromium is incapable of gracefully handling
+	// the error, so we will return NULL if this function is requested.
+	//
+
+	if (KexData->Flags & KEXDATA_FLAG_CHROMIUM) {
+		if((unsigned)lpProcName > 0xFFFF) {
+			if(!lstrcmpA(lpProcName, "VirtualAlloc2")) {
+				SetLastError(STATUS_ENTRYPOINT_NOT_FOUND);
+				return NULL;
+			}
+		}
+	}
+
+	return GetProcAddress(hModule, lpProcName);
 }
 
 KXBASEAPI HMODULE WINAPI Ext_GetModuleHandleW(

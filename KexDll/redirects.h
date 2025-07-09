@@ -16,11 +16,14 @@ STATIC CONST UNICODE_STRING DllRedirects[][2] = {
 	DLL_REDIRECT("bcrypt",										"kxcryp"			)
 	DLL_REDIRECT("bcryptprimitives",							"kxcryp"			)
 	DLL_REDIRECT("secur32",										"kxcryp"			)
+	DLL_REDIRECT("crypt32",										"kxcryp"			)
 	
 	DLL_REDIRECT("BluetoothApis",								"kxuser"			)
 	DLL_REDIRECT("shcore",										"kxuser"			)
 	DLL_REDIRECT("user32",										"kxuser"			)
 	
+	DLL_REDIRECT("wintrust",									"kxtrust"			)
+
 	DLL_REDIRECT("combase",										"kxcom"				)
 	DLL_REDIRECT("ole32",										"kxcom"				)
 
@@ -43,10 +46,15 @@ STATIC CONST UNICODE_STRING DllRedirects[][2] = {
 	DLL_REDIRECT("dnsapi",										"kxnet"				)
 	DLL_REDIRECT("winhttp",										"kxnet"				)
 	DLL_REDIRECT("ws2_32",										"kxnet"				)
+	DLL_REDIRECT("netapi32",									"kxnet"				)
 
 	DLL_REDIRECT("advapi32",									"kxadvapi"			)
 
 	DLL_REDIRECT("UIAutomationCore",							"kxuia"				)
+
+	DLL_REDIRECT("XAudio2_8",									"XAudio2_9"			)
+
+	DLL_REDIRECT("gamingtcui",									"kxgaming"			)
 
 	//
 	// The DLL rewriting routine strips the -lX-Y-Z suffix from the API set name to
@@ -118,6 +126,7 @@ STATIC CONST UNICODE_STRING DllRedirects[][2] = {
 	DLL_REDIRECT("api-ms-win-core-threadpool-private",			"kxbase"			)
 	DLL_REDIRECT("api-ms-win-core-toolhelp",					"kxbase"			)
 	DLL_REDIRECT("api-ms-win-core-timezone",					"kxbase"			)
+	DLL_REDIRECT("api-ms-win-core-ums",							"kxbase"			)
 	DLL_REDIRECT("api-ms-win-core-url",							"kxuser"			)
 	DLL_REDIRECT("api-ms-win-core-util",						"kxbase"			)
 	DLL_REDIRECT("api-ms-win-core-version",						"version"			)
@@ -160,6 +169,7 @@ STATIC CONST UNICODE_STRING DllRedirects[][2] = {
 	DLL_REDIRECT("api-ms-win-eventing-controller",				"kxadvapi"			)
 	DLL_REDIRECT("api-ms-win-eventing-legacy",					"kxadvapi"			)
 	DLL_REDIRECT("api-ms-win-eventing-provider",				"kxadvapi"			)
+	DLL_REDIRECT("api-ms-win-gaming-tcui",						"kxgaming"			)
 	DLL_REDIRECT("api-ms-win-eventlog-legacy",					"kxadvapi"			)
 	DLL_REDIRECT("api-ms-win-kernel32-package-current",			"kxbase"			)
 	DLL_REDIRECT("api-ms-win-mm-time",							"winmm"				)
@@ -192,18 +202,25 @@ STATIC CONST UNICODE_STRING DllRedirects[][2] = {
 	DLL_REDIRECT("api-ms-win-shcore-unicodeansi",				"kxuser"			)
 	DLL_REDIRECT("api-ms-win-shell-namespace",					"kxuser"			)
 
+	DLL_REDIRECT("ext-ms-win-com-ole32",						"kxcom"				)
 	DLL_REDIRECT("ext-ms-win-branding-winbrand",				"winbrand"			)
 	DLL_REDIRECT("ext-ms-win-gdi-dc",							"gdi32"				)
 	DLL_REDIRECT("ext-ms-win-gdi-dc-create",					"gdi32"				)
 	DLL_REDIRECT("ext-ms-win-gdi-draw",							"gdi32"				)
 	DLL_REDIRECT("ext-ms-win-gdi-font",							"gdi32"				)
 	DLL_REDIRECT("ext-ms-win-gdi-path",							"gdi32"				)
+	DLL_REDIRECT("ext-ms-win-ntuser-draw",						"kxuser"			)
+	DLL_REDIRECT("ext-ms-win-ntuser-message",					"kxuser"			)
 	DLL_REDIRECT("ext-ms-win-ntuser-rotationmanager",			"kxuser"			)
+	DLL_REDIRECT("ext-ms-win-ntuser-window",					"kxuser"			)
 	DLL_REDIRECT("ext-ms-win-rtcore-gdi-devcaps",				"gdi32"				)
 	DLL_REDIRECT("ext-ms-win-rtcore-gdi-object",				"gdi32"				)
 	DLL_REDIRECT("ext-ms-win-rtcore-gdi-rgn",					"gdi32"				)
 	DLL_REDIRECT("ext-ms-win-rtcore-ntuser-sysparams",			"kxuser"			)
-	DLL_REDIRECT("ext-ms-win-uiacore",							"kxuia"	)
+	DLL_REDIRECT("ext-ms-win-shell-comctl32-window",			"kxcom"             )
+	DLL_REDIRECT("ext-ms-win-uiacore",							"kxuia"				)
+
+	DLL_REDIRECT("Windows.System.Launcher",						"kxcom"				)
 };
 
 #undef DLL_REDIRECT

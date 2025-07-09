@@ -169,3 +169,9 @@ KXCOMAPI HRESULT WINAPI RoCaptureErrorContext(
 {
 	return E_NOTIMPL;
 }
+
+KXCOMAPI HRESULT WINAPI RoSetErrorReportingFlags(
+	IN UINT32 flags)
+{
+	return S_OK;
+}

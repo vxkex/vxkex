@@ -489,6 +489,8 @@
 #define MEM_EXTENDED_PARAMETER_NUMA_NODE_MANDATORY      MINLONG64
 
 #define MEM_REPLACE_PLACEHOLDER 0x4000
+#define MEM_RESERVE_PLACEHOLDER 0x00040000
+#define MEM_64K_PAGES 0x20400000
 
 // win10+ only - NtMapViewOfSectionEx
 typedef enum _MEM_EXTENDED_PARAMETER_TYPE {
@@ -521,7 +523,7 @@ typedef struct DECLSPEC_ALIGN(8) _MEM_EXTENDED_PARAMETER {
 
 typedef struct _MEM_ADDRESS_REQUIREMENTS {
 	PVOID	LowestStartingAddress;
-	PVOID	HighestStartingAddress;
+	PVOID	HighestEndingAddress;
 	SIZE_T	Alignment;
 } TYPEDEF_TYPE_NAME(MEM_ADDRESS_REQUIREMENTS);
 
@@ -3942,6 +3944,11 @@ NTSYSAPI VOID NTAPI RtlFreeUnicodeString(
 NTSYSAPI BOOLEAN NTAPI RtlEqualUnicodeString(
 	IN	PCUNICODE_STRING	String1,
 	IN	PCUNICODE_STRING	String2,
+	IN	BOOLEAN				CaseInsensitive);
+
+NTSYSAPI BOOLEAN NTAPI RtlEqualString(
+	IN	PSTRING	String1,
+	IN	PSTRING	String2,
 	IN	BOOLEAN				CaseInsensitive);
 
 NTSYSAPI LONG NTAPI RtlCompareUnicodeString(

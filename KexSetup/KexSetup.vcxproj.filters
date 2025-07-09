@@ -57,7 +57,7 @@
     <None Include="KexSetup.ico">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="VxKexNEXT.ico">
+    <None Include="VxKex.ico">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

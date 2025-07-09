@@ -46,6 +46,7 @@ EXPORTS
 	;; misc.c
 	GetOsSafeBootMode
 	GetFirmwareType
+	InitializeCriticalSectionEx		= InitializeCriticalSectionEx_Ext
 
 	;; geoname.c
 	GetUserDefaultGeoName
@@ -61,6 +62,8 @@ EXPORTS
 	;; time.c
 	GetSystemTimePreciseAsFileTime
 	QueryUnbiasedInterruptTimePrecise
+	GetDynamicTimeZoneInformationEffectiveYears
+	EnumDynamicTimeZoneInformation
 
 	;; appmodel.c
 	AppPolicyGetProcessTerminationMethod
@@ -78,6 +81,8 @@ EXPORTS
 	GetPackagePathByFullName
 	GetPackagesByPackageFamily
 	PackageFamilyNameFromFullName
+	PackageIdFromFullName
+	GetPackagePath
 
 	;; synch.c
 	WaitOnAddress
@@ -103,6 +108,8 @@ EXPORTS
 	UnmapViewOfFileEx
 	MapViewOfFile3
 	MapViewOfFile3FromApp
+	VirtualAlloc2
+	VirtualAlloc2FromApp
 
 	;; KexPathCch
 	PathAllocCanonicalize
@@ -185,6 +192,8 @@ EXPORTS
 	AddDllDirectory						= Ext_AddDllDirectory
 	RemoveDllDirectory					= Ext_RemoveDllDirectory
 	SetDefaultDllDirectories			= Ext_SetDefaultDllDirectories
+	SetDefaultDllDirectoriesW			= Ext_SetDefaultDllDirectories
+	GetProcAddress						= Ext_GetProcAddress
 
 	;; security.c
 	CreateWellKnownSid					= Ext_CreateWellKnownSid
@@ -199,3 +208,12 @@ EXPORTS
 
 	;; heap.c
 	HeapCreate							= Ext_HeapCreate
+
+	;; registry.c
+	RegOpenKeyExA						= RegOpenKeyExA_Ext
+	RegOpenKeyExW						= RegOpenKeyExW_Ext
+	RegEnumKeyExA						= RegEnumKeyExA_Ext
+	RegEnumKeyExW						= RegEnumKeyExW_Ext
+
+	;; ORIGINAL DLL
+	GetEnvironmentVariable				= GetEnvironmentVariableW

@@ -39,6 +39,9 @@ EXTERN ULONG OriginalMajorVersion, OriginalMinorVersion, OriginalBuildNumber;
 EXTERN DLL_DIRECTORY_DATA DllDirectoryData;
 EXTERN ULONG DefaultDllDirectoryFlags;
 
+KXBASEAPI PCWSTR WINAPI StrStrW(IN PCWSTR pszFirst, IN PCWSTR pszSrch);
+KXBASEAPI PCSTR WINAPI StrStrA(IN PCSTR pszFirst, IN PCSTR pszSrch);
+
 //
 // module.c
 //

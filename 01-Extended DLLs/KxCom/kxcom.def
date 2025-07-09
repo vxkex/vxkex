@@ -15,6 +15,7 @@ EXPORTS
 	RoGetAgileReference
 	RoOriginateLanguageException
 	RoGetBufferMarshaler
+	RoSetErrorReportingFlags
 
 	GetRestrictedErrorInfo
 	SetRestrictedErrorInfo

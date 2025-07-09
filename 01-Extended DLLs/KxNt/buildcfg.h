@@ -40,6 +40,8 @@
 #define NOSERVICE
 #define NOSOUND
 
+#define KXNTAPI
+
 #define KEX_ENV_NATIVE
 #define KEX_TARGET_TYPE_DLL
 #define KEX_COMPONENT L"KxNt"

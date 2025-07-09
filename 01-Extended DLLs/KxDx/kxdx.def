@@ -30,3 +30,4 @@ EXPORTS
 	MFCreateDXGISurfaceBuffer
 	MFMapDXGIFormatToDX9Format
 	MFMapDX9FormatToDXGIFormat
+	MFCreateDXGIDeviceManager
