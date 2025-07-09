@@ -3,6 +3,7 @@
 # Changes
 - https://github.com/dotexe1337/VxKex/ changes merged.
 - https://github.com/tahaghafuri/vxkex changes merged.
+- https://github.com/YuZhouRen86/VxKex-NEXT changes merged.
 
 # Goal
 ## Collecting and merging all vxkex forks in one complete edition
