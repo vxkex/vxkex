@@ -36,6 +36,6 @@
 #define KEX_COMPONENT L"VxlView"
 #define KEX_TARGET_TYPE_EXE
 #define KEX_ENV_WIN32
-#define FRIENDLYAPPNAME_ENG L"VxKex NEXT Log Viewer"
-#define FRIENDLYAPPNAME_CHS L"VxKex NEXT 日志查看器"
-#define FRIENDLYAPPNAME_CHT L"VxKex NEXT ﻿日誌查看器"
+#define FRIENDLYAPPNAME_ENG L"VxKex Log Viewer"
+#define FRIENDLYAPPNAME_CHS L"VxKex 日志查看器"
+#define FRIENDLYAPPNAME_CHT L"VxKex ﻿日誌查看器"

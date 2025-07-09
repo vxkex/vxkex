@@ -50,13 +50,13 @@ VOID KexSetupCreateLinkToStartMenu(
 	WCHAR KexCfgExePath[MAX_PATH] = {0};
 	StringCchCat(KexCfgExePath, MAX_PATH, KexDir);
 	StringCchCat(KexCfgExePath, MAX_PATH, L"\\KexCfg.exe");
-	CreateLinkToStartMenuForAllUsers(L"VxKex NEXT Global Settings", KexCfgExePath, NULL);
+	CreateLinkToStartMenuForAllUsers(L"VxKex Global Settings", KexCfgExePath, NULL);
 }
 
 VOID KexSetupDeleteLinkFromStartMenu(
 	VOID)
 {
-	DeleteLinkFromStartMenuForAllUsers(L"VxKex NEXT Global Settings");
+	DeleteLinkFromStartMenuForAllUsers(L"VxKex Global Settings");
 }
 
 VOID KexSetupWriteUninstallEntry(
@@ -82,7 +82,7 @@ VOID KexSetupWriteUninstallEntry(
 		StringCchPrintf(UninstallString, ARRAYSIZE(UninstallString), L"%s\\KexSetup.exe /UNINSTALL", KexDir);
 		
 		KexSetupRegWriteString(KeyHandle, L"DisplayIcon",		DisplayIcon);
-		KexSetupRegWriteString(KeyHandle, L"DisplayName",		L"VxKex NEXT API Extensions for Windows® 7");
+		KexSetupRegWriteString(KeyHandle, L"DisplayName",		L"VxKex API Extensions for Windows® 7");
 		KexSetupRegWriteString(KeyHandle, L"DisplayVersion",	_L(KEX_VERSION_STR));
 		KexSetupRegWriteString(KeyHandle, L"Publisher",			L"YuZhouRen");
 		KexSetupRegWriteString(KeyHandle, L"InstallDate",		FormattedDate);
@@ -181,14 +181,14 @@ VOID KexSetupAddKexCfgScheduledTask(
 			L"<Task version='1.3' xmlns='http://schemas.microsoft.com/windows/2004/02/mit/task'>\r\n"
 			L"  <RegistrationInfo>\r\n"
 			L"    <Author>YuZhouRen</Author>\r\n"
-			L"    <Source>VxKex NEXT</Source>\r\n"
+			L"    <Source>VxKex</Source>\r\n"
 			L"    <Description>\r\n"
-			L"This scheduled task is run on-demand by VxKex NEXT components and utilities (for example, "
-			L"the shell extension). It allows VxKex NEXT to be enabled, disabled, or configured for a program "
+			L"This scheduled task is run on-demand by VxKex components and utilities (for example, "
+			L"the shell extension). It allows VxKex to be enabled, disabled, or configured for a program "
 			L"without requiring you to interact with a User Account Control prompt. "
 			L"You may safely disable or remove this scheduled task if you want. However, keep in mind that "
 			L"if you do this, and you have User Account Control enabled, you may get a consent prompt every "
-			L"time you configure VxKex NEXT for a program."
+			L"time you configure VxKex for a program."
 			L"    </Description>\r\n"
 			L"  </RegistrationInfo>\r\n"
 			L"  <Triggers />\r\n"

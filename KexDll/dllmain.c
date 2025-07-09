@@ -137,7 +137,7 @@ BOOL WINAPI DllMain(
 
 		KexLogInformationEvent(
 			L"Process created\r\n\r\n"
-			L"The VxKex NEXT version is %hs (%s)\r\n"
+			L"The VxKex version is %hs (%s)\r\n"
 			L"The Windows version is %u.%u.%u\r\n"
 			L"The program is %d-bit and the operating system is %d-bit\r\n"
 			L"Full path to the EXE: %wZ\r\n"

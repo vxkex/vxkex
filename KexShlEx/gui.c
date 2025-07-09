@@ -119,7 +119,7 @@ INT_PTR CALLBACK DialogProc(
 
 		if (CURRENTLANG == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED)) {
 			ToolTip(Window, IDUSEVXKEX,
-				L"启用或禁用主 VxKex NEXT 兼容层。");
+				L"启用或禁用主 VxKex 兼容层。");
 			ToolTip(Window, IDSPOOFVERSIONCHECK,
 				L"一些应用程序会检查 Windows 版本，如果版本过低，则拒绝运行。"
 				L"此选项可以帮助这些应用程序正常运行。\r\n\r\n"
@@ -129,13 +129,13 @@ INT_PTR CALLBACK DialogProc(
 				L"这个选项可以帮助诱使它们工作。"
 				L"除非您遇到版本检测方面的问题，否则请勿启用此设置。");
 			ToolTip(Window, IDDISABLEFORCHILD,
-				L"默认情况下，由此程序启动的所有其他程序都会启用 VxKex NEXT 运行。此选项禁用这一行为。");
+				L"默认情况下，由此程序启动的所有其他程序都会启用 VxKex 运行。此选项禁用这一行为。");
 			ToolTip(Window, IDDISABLEAPPSPECIFIC,
-				L"对于某些应用程序，VxKex NEXT 可能会使用特定于应用程序的变通方法或修补程序。"
+				L"对于某些应用程序，VxKex 可能会使用特定于应用程序的变通方法或修补程序。"
 				L"此选项禁用这一行为。使用此选项可能会降低应用程序的兼容性。");
 		} else if (CURRENTLANG == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL)) {
 			ToolTip(Window, IDUSEVXKEX,
-				L"啟用或停用主 VxKex NEXT 相容層。");
+				L"啟用或停用主 VxKex 相容層。");
 			ToolTip(Window, IDSPOOFVERSIONCHECK,
 				L"一些應用程式會檢查 Windows 版本，如果版本過低，則拒絕執行。"
 				L"此選項可以幫助這些應用程式正常執行。\r\n\r\n"
@@ -145,13 +145,13 @@ INT_PTR CALLBACK DialogProc(
 				L"這個選項可以幫助誘使它們工作。"
 				L"除非您遇到版本檢測方面的問題，否則請勿啟用此設定。");
 			ToolTip(Window, IDDISABLEFORCHILD,
-				L"預設情況下，由此程式啟動的所有其他程式都會啟用 VxKex NEXT 執行。此選項停用這一行為。");
+				L"預設情況下，由此程式啟動的所有其他程式都會啟用 VxKex 執行。此選項停用這一行為。");
 			ToolTip(Window, IDDISABLEAPPSPECIFIC,
-				L"對於某些應用程式，VxKex NEXT 可能會使用特定於應用程式的變通方法或修補程式。"
+				L"對於某些應用程式，VxKex 可能會使用特定於應用程式的變通方法或修補程式。"
 				L"此選項停用這一行為。使用此選項可能會降低應用程式的相容性。");
 		} else {
 			ToolTip(Window, IDUSEVXKEX,
-				L"Enable or disable the main VxKex NEXT compatibility layer.");
+				L"Enable or disable the main VxKex compatibility layer.");
 			ToolTip(Window, IDSPOOFVERSIONCHECK,
 				L"Some applications check the Windows version and refuse to run if it is too low. "
 				L"This option can help these applications to run correctly.\r\n\r\n"
@@ -162,10 +162,10 @@ INT_PTR CALLBACK DialogProc(
 				L"can help trick them into working. Do not enable this setting unless you are having "
 				L"a problem with version detection.");
 			ToolTip(Window, IDDISABLEFORCHILD,
-				L"By default, all other programs that are started by this program run with VxKex NEXT "
+				L"By default, all other programs that are started by this program run with VxKex "
 				L"enabled. This option disables that behavior.");
 			ToolTip(Window, IDDISABLEAPPSPECIFIC,
-				L"For some applications, VxKex NEXT may use application-specific workarounds or patches. "
+				L"For some applications, VxKex may use application-specific workarounds or patches. "
 				L"This option disables that behavior. Using this option may degrade application "
 				L"compatibility.");
 			

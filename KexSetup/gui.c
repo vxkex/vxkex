@@ -204,37 +204,37 @@ VOID SetScene(
 	USHORT MaxControlId;
 	PCWSTR HeaderTexts[9][2];
 	PCWSTR HeaderTextsENG[9][2] = {
-		{L"Choose Install Location",	L"Choose where you want VxKex NEXT to install files."},
+		{L"Choose Install Location",	L"Choose where you want VxKex to install files."},
 		{L"Installing...",				L"Installation is now in progress."},
-		{L"Installation Complete",		L"VxKex NEXT is now ready for use."},
-		{L"Uninstall VxKex NEXT",		L"Review the information below, and then click \"Uninstall\"."},
+		{L"Installation Complete",		L"VxKex is now ready for use."},
+		{L"Uninstall VxKex",		L"Review the information below, and then click \"Uninstall\"."},
 		{L"Uninstalling...",			L"Uninstallation is now in progress."},
-		{L"Uninstallation Complete",	L"VxKex NEXT has been removed from your computer."},
+		{L"Uninstallation Complete",	L"VxKex has been removed from your computer."},
 		{L"Update VxKex",				L"Review the information below, and then click \"Update\"."},
 		{L"Updating...",				L"Update is now in progress."},
-		{L"Update Complete",			L"VxKex NEXT is now ready for use."}
+		{L"Update Complete",			L"VxKex is now ready for use."}
 	};
 	PCWSTR HeaderTextsCHS[9][2] = {
-		{L"选择安装位置",				L"选择您希望 VxKex NEXT 安装文件的位置。"},
+		{L"选择安装位置",				L"选择您希望 VxKex 安装文件的位置。"},
 		{L"正在安装...",				L"安装正在进行中。"},
-		{L"安装完成",					L"VxKex NEXT 现已准备就绪，可供使用。"},
-		{L"卸载 VxKex NEXT",			L"查看以下信息，然后单击“卸载”。"},
+		{L"安装完成",					L"VxKex 现已准备就绪，可供使用。"},
+		{L"卸载 VxKex",			L"查看以下信息，然后单击“卸载”。"},
 		{L"正在卸载...",				L"卸载正在进行中。"},
-		{L"卸载完成",					L"已从您的计算机中删除 VxKex NEXT。"},
+		{L"卸载完成",					L"已从您的计算机中删除 VxKex。"},
 		{L"更新 VxKex",					L"查看以下信息，然后单击“更新”。"},
 		{L"正在更新...",				L"更新正在进行中。"},
-		{L"更新完成",					L"VxKex NEXT 现已准备就绪，可供使用。"}
+		{L"更新完成",					L"VxKex 现已准备就绪，可供使用。"}
 	};
 	PCWSTR HeaderTextsCHT[9][2] = {
-		{L"選擇安裝位置",				L"選擇您希望 VxKex NEXT 安裝檔案的位置。"},
+		{L"選擇安裝位置",				L"選擇您希望 VxKex 安裝檔案的位置。"},
 		{L"正在安裝...",				L"安裝正在進行中。"},
-		{L"安裝完成",					L"VxKex NEXT 現已準備就緒，可供使用。"},
-		{L"解除安裝 VxKex NEXT",		L"查看以下資訊，然後單擊「解除安裝」。"},
+		{L"安裝完成",					L"VxKex 現已準備就緒，可供使用。"},
+		{L"解除安裝 VxKex",		L"查看以下資訊，然後單擊「解除安裝」。"},
 		{L"正在解除安裝...",			L"解除安裝正在進行中。"},
-		{L"解除安裝完成",				L"已從您的電腦中刪除 VxKex NEXT。"},
+		{L"解除安裝完成",				L"已從您的電腦中刪除 VxKex。"},
 		{L"更新 VxKex",					L"查看以下資訊，然後單擊「更新」。"},
 		{L"正在更新...",				L"更新正在進行中。"},
-		{L"更新完成",					L"VxKex NEXT 現已準備就緒，可供使用。"}
+		{L"更新完成",					L"VxKex 現已準備就緒，可供使用。"}
 	};
 	int i, j;
 	if (CURRENTLANG == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED)) {
@@ -567,11 +567,11 @@ INT_PTR CALLBACK DialogProc(
 			ToolTip(
 				Window,
 				IDS4PRESERVECONFIG,
-				(CURRENTLANG == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED)) ? L"保留应用程序的兼容性设置（如 Windows 版本欺骗）。这些应用程序仍将禁用 VxKex NEXT，如果您决定重新安装，则需要重新启用 VxKex NEXT。" :
-				(CURRENTLANG == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL)) ? L"保留應用程式的相容性設定（如 Windows 版本欺騙）。這些應用程式仍將停用 VxKex NEXT，如果您決定重新安裝，則需要重新啟用 VxKex NEXT。" :
+				(CURRENTLANG == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED)) ? L"保留应用程序的兼容性设置（如 Windows 版本欺骗）。这些应用程序仍将禁用 VxKex，如果您决定重新安装，则需要重新启用 VxKex。" :
+				(CURRENTLANG == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL)) ? L"保留應用程式的相容性設定（如 Windows 版本欺騙）。這些應用程式仍將停用 VxKex，如果您決定重新安裝，則需要重新啟用 VxKex。" :
 				(L"Preserve the application compatibility settings (such as Windows version spoofing) "
-				L"for applications. VxKex NEXT will still be disabled for these applications and you will "
-				L"need to re-enable VxKex NEXT if you decide to reinstall."));
+				L"for applications. VxKex will still be disabled for these applications and you will "
+				L"need to re-enable VxKex if you decide to reinstall."));
 		}
 	} else if (Message == WM_DRAWITEM) {
 		LPDRAWITEMSTRUCT lpDrawItemStruct = (LPDRAWITEMSTRUCT) LParam;

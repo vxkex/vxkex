@@ -10,6 +10,6 @@
 #define KEX_TARGET_TYPE_EXE
 #define KEX_ENV_WIN32
 #define KEX_COMPONENT L"KexCfg"
-#define FRIENDLYAPPNAME_ENG L"VxKex NEXT Configuration Tool"
-#define FRIENDLYAPPNAME_CHS L"VxKex NEXT 配置工具"
-#define FRIENDLYAPPNAME_CHT L"VxKex NEXT ﻿配置工具"
+#define FRIENDLYAPPNAME_ENG L"VxKex Configuration Tool"
+#define FRIENDLYAPPNAME_CHS L"VxKex 配置工具"
+#define FRIENDLYAPPNAME_CHT L"VxKex ﻿配置工具"

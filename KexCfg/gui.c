@@ -91,7 +91,7 @@ STATIC VOID KexCfgGuiApplyGlobalConfiguration(
 	// Create transaction for the operation
 	//
 
-	TransactionHandle = CreateSimpleTransaction(L"VxKex NEXT Configuration Tool (GUI) Transaction");
+	TransactionHandle = CreateSimpleTransaction(L"VxKex Configuration Tool (GUI) Transaction");
 
 	if (!TransactionHandle) {
 		if (CURRENTLANG == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED)) {
@@ -256,7 +256,7 @@ STATIC VOID RemoveSelectedPrograms(
 	ULONG ItemIndex;
 	HANDLE TransactionHandle;
 
-	TransactionHandle = CreateSimpleTransaction(L"VxKex NEXT Configuration Tool (GUI) Transaction");
+	TransactionHandle = CreateSimpleTransaction(L"VxKex Configuration Tool (GUI) Transaction");
 
 	if (!TransactionHandle) {
 		if (CURRENTLANG == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED)) {
@@ -363,18 +363,18 @@ STATIC VOID AddProgram(
 
 	if (StringBeginsWithI(DirectoryName, SharedUserData->NtSystemRoot)) {
 		// program(s) are in the Windows directory - do not allow
-		if (CURRENTLANG == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED)) ErrorBoxF(L"无法为 Windows 目录中的程序启用 VxKex NEXT。");
-		else if (CURRENTLANG == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL)) ErrorBoxF(L"無法為 Windows 目錄中的程式啟用 VxKex NEXT。");
-		else ErrorBoxF(L"You cannot enable VxKex NEXT for programs in the Windows directory.");
+		if (CURRENTLANG == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED)) ErrorBoxF(L"无法为 Windows 目录中的程序启用 VxKex。");
+		else if (CURRENTLANG == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL)) ErrorBoxF(L"無法為 Windows 目錄中的程式啟用 VxKex。");
+		else ErrorBoxF(L"You cannot enable VxKex for programs in the Windows directory.");
 		return;
 	}
 
 	KxCfgGetKexDir(KexDir, ARRAYSIZE(KexDir));
 
 	if (StringBeginsWithI(DirectoryName, KexDir)) {
-		if (CURRENTLANG == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED)) ErrorBoxF(L"无法为 VxKex NEXT 安装目录中的程序启用 VxKex NEXT。");
-		else if (CURRENTLANG == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL)) ErrorBoxF(L"﻿無法為 VxKex NEXT 安裝目錄中的程式啟用 VxKex NEXT。");
-		else ErrorBoxF(L"You cannot enable VxKex NEXT for programs in the VxKex NEXT installation directory.");
+		if (CURRENTLANG == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED)) ErrorBoxF(L"无法为 VxKex 安装目录中的程序启用 VxKex。");
+		else if (CURRENTLANG == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL)) ErrorBoxF(L"﻿無法為 VxKex 安裝目錄中的程式啟用 VxKex。");
+		else ErrorBoxF(L"You cannot enable VxKex for programs in the VxKex installation directory.");
 		return;
 	}
 
@@ -402,7 +402,7 @@ STATIC VOID AddProgram(
 	// Create transaction for the operation.
 	//
 
-	TransactionHandle = CreateSimpleTransaction(L"VxKex NEXT Configuration Tool (GUI) Transaction");
+	TransactionHandle = CreateSimpleTransaction(L"VxKex Configuration Tool (GUI) Transaction");
 
 	if (!TransactionHandle) {
 		if (CURRENTLANG == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED)) {
@@ -479,7 +479,7 @@ STATIC VOID ProgramNotFoundUserPrompt(
 			FRIENDLYAPPNAME,
 			L"无法找到所选程序",
 			L"程序“%s”已被移动或删除。"
-			L"您想从启用 VxKex NEXT 的应用程序列表中删除此条目吗？",
+			L"您想从启用 VxKex 的应用程序列表中删除此条目吗？",
 			ProgramFullPath);
 	} else if (CURRENTLANG == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL)) {
 		UserResponse = MessageBoxF(
@@ -488,7 +488,7 @@ STATIC VOID ProgramNotFoundUserPrompt(
 			FRIENDLYAPPNAME,
 			L"無法找到所選程式",
 			L"程式「%s」已被移動或刪除。"
-			L"您想從啟用 VxKex NEXT 的應用程式列表中刪除此條目嗎？",
+			L"您想從啟用 VxKex 的應用程式列表中刪除此條目嗎？",
 			ProgramFullPath);
 	} else {
 		UserResponse = MessageBoxF(
@@ -913,38 +913,38 @@ STATIC INT_PTR CALLBACK DialogProc(
 		//
 		if (CURRENTLANG == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED)) {
 			ToolTip(Window, IDC_ENABLELOGGING,
-				L"如果启用了日志记录功能，每当您运行启用了 VxKex NEXT 的应用程序时，VxKex NEXT 都会在指定文件夹中创建日志文件。");
+				L"如果启用了日志记录功能，每当您运行启用了 VxKex 的应用程序时，VxKex 都会在指定文件夹中创建日志文件。");
 			ToolTip(Window, IDC_ENABLEFORMSI,
-				L"此选项允许 VxKex NEXT 与 MSI 安装程序一起工作。\r\n"
+				L"此选项允许 VxKex 与 MSI 安装程序一起工作。\r\n"
 				L"如果在使用 MSI 安装程序时遇到意外问题，请尝试禁用此选项。");
 			ToolTip(Window, IDC_CPIWBYPA,
 				L"此选项会在启动时将一个 DLL 加载到 Windows 资源管理器中，以移除某些程序的版本检查。\r\n"
 				L"如果在使用 Windows 资源管理器时遇到意外问题，请尝试禁用此选项。");
 			ToolTip(Window, IDC_ADDTOMENU,
-				L"在 .exe 和 .msi 文件的上下文菜单中添加“使用 VxKex NEXT 运行”选项。");
+				L"在 .exe 和 .msi 文件的上下文菜单中添加“使用 VxKex 运行”选项。");
 			ToolTip(Window, IDC_WHICHCONTEXTMENU,
 				L"按住 Shift 键并右键单击 .exe 或 .msi 文件可打开扩展上下文菜单。\r\n"
 				L"在不按住 Shift 键的情况下右键单击可打开常规上下文菜单。");
 		} else if (CURRENTLANG == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL)) {
 			ToolTip(Window, IDC_ENABLELOGGING,
-				L"如果啟用了日誌記錄功能，每當您執行啟用了 VxKex NEXT 的應用程式時，VxKex NEXT 都會在指定﻿資料夾中創建日誌檔案。");
+				L"如果啟用了日誌記錄功能，每當您執行啟用了 VxKex 的應用程式時，VxKex 都會在指定﻿資料夾中創建日誌檔案。");
 			ToolTip(Window, IDC_ENABLEFORMSI,
-				L"此選項允許 VxKex NEXT 與 MSI 安裝程式一起工作。\r\n"
+				L"此選項允許 VxKex 與 MSI 安裝程式一起工作。\r\n"
 				L"如果在使用 MSI 安裝程式時遇到意外問題，請嘗試停用此選項。");
 			ToolTip(Window, IDC_CPIWBYPA,
 				L"此選項會在啟動時將一個 DLL 載入到 Windows 資源管理器中，以移除某些程式的版本檢查。\r\n"
 				L"如果在使用 Windows 資源管理器時遇到意外問題，請嘗試停用此選項。");
 			ToolTip(Window, IDC_ADDTOMENU,
-				L"在 .exe 和 .msi 檔案的上下文功能表中添加「使用 VxKex NEXT 執行」選項。");
+				L"在 .exe 和 .msi 檔案的上下文功能表中添加「使用 VxKex 執行」選項。");
 			ToolTip(Window, IDC_WHICHCONTEXTMENU,
 				L"按住 Shift 鍵並右鍵單擊 .exe 或 .msi 檔案可開啟擴展上下文功能表。\r\n"
 				L"在不按住 Shift 鍵的情況下右鍵單擊可開啟常規上下文功能表。");
 		} else {
 			ToolTip(Window, IDC_ENABLELOGGING,
-				L"If you enable logging, VxKex NEXT will create log files in the specified "
-				L"folder every time you run an application which has VxKex NEXT enabled.");
+				L"If you enable logging, VxKex will create log files in the specified "
+				L"folder every time you run an application which has VxKex enabled.");
 			ToolTip(Window, IDC_ENABLEFORMSI,
-				L"This option allows VxKex NEXT to work with MSI installers.\r\n"
+				L"This option allows VxKex to work with MSI installers.\r\n"
 				L"If you encounter unexpected problems with MSI installers, try disabling this option.");
 			ToolTip(Window, IDC_CPIWBYPA,
 				L"This option causes a DLL to be loaded into Windows Explorer at startup in order "
@@ -952,7 +952,7 @@ STATIC INT_PTR CALLBACK DialogProc(
 				L"If you encounter unexpected problems with Windows Explorer, try disabling this "
 				L"option.");
 			ToolTip(Window, IDC_ADDTOMENU,
-				L"Add \"Run with VxKex NEXT\" options to the context menu for .exe and .msi files.");
+				L"Add \"Run with VxKex\" options to the context menu for .exe and .msi files.");
 			ToolTip(Window, IDC_WHICHCONTEXTMENU,
 				L"Shift + Right Click on a .exe or .msi file opens the extended context menu.\r\n"
 				L"Right clicking without holding the Shift key opens the normal context menu.");

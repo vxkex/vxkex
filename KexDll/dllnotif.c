@@ -110,18 +110,18 @@ VOID NTAPI KexDllNotificationCallback(
 			ULONG Response;
 			PWCHAR ImageBaseName;
 			LCID DefaultUILanguageId;
-			PCWSTR FormattingMessage_ENG = L"Detected an old version of MacType is running. VxKex NEXT compatibility layer is enabled for this program (%s), enabling VxKex NEXT and older versions of MacType (versions between 2019.1 and 2025.4.11) at the same time may cause the program to crash. Updating MacType to version 2025.6.9 or later will resolve the issue."
+			PCWSTR FormattingMessage_ENG = L"Detected an old version of MacType is running. VxKex compatibility layer is enabled for this program (%s), enabling VxKex and older versions of MacType (versions between 2019.1 and 2025.4.11) at the same time may cause the program to crash. Updating MacType to version 2025.6.9 or later will resolve the issue."
 				L"\n\n"
 				L"It is recommended to terminate this process to prevent further program errors. Do you want to terminate this process immediately?";
-			PCWSTR FormattingMessage_CHS = L"检测到旧版 MacType 正在运行。此程序（%s）已启用 VxKex NEXT 兼容层，VxKex NEXT 与旧版 MacType（2019.1 和 2025.4.11 之间的版本）同时启用可能导致程序崩溃，更新 MacType 至 2025.6.9 及以上版本即可解决此问题。"
+			PCWSTR FormattingMessage_CHS = L"检测到旧版 MacType 正在运行。此程序（%s）已启用 VxKex 兼容层，VxKex 与旧版 MacType（2019.1 和 2025.4.11 之间的版本）同时启用可能导致程序崩溃，更新 MacType 至 2025.6.9 及以上版本即可解决此问题。"
 				L"\n\n"
 				L"建议结束此进程，以防止程序进一步的错误。是否想要立即结束此进程？";
-			PCWSTR FormattingMessage_CHT = L"檢測到舊版 MacType 正在執行。此程式（%s）已啟用 VxKex NEXT 相容層，VxKex NEXT 與舊版 MacType（2019.1 和 2025.4.11 之間的版本）同時啟用可能導致程式當機，更新 MacType 至 2025.6.9 及以上版本即可解決此問題。"
+			PCWSTR FormattingMessage_CHT = L"檢測到舊版 MacType 正在執行。此程式（%s）已啟用 VxKex 相容層，VxKex 與舊版 MacType（2019.1 和 2025.4.11 之間的版本）同時啟用可能導致程式當機，更新 MacType 至 2025.6.9 及以上版本即可解決此問題。"
 				L"\n\n"
 				L"建議結束此處理程序，以防止程式進一步的錯誤。是否想要立即結束此處理程序？";
-			PCWSTR WarningTitle_ENG = L"VxKex NEXT Application Warning";
-			PCWSTR WarningTitle_CHS = L"VxKex NEXT 应用程序警告";
-			PCWSTR WarningTitle_CHT = L"VxKex NEXT 應用程式警告";
+			PCWSTR WarningTitle_ENG = L"VxKex Application Warning";
+			PCWSTR WarningTitle_CHS = L"VxKex 应用程序警告";
+			PCWSTR WarningTitle_CHT = L"VxKex 應用程式警告";
 			PCWSTR FormattingMessage;
 			PCWSTR WarningTitle;
 			STRSAFE_LPWSTR Message;
