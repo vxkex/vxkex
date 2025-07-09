@@ -5,8 +5,17 @@
 - https://github.com/tahaghafuri/vxkex changes merged.
 - https://github.com/YuZhouRen86/VxKex-NEXT changes merged.
 
+# Changes pending merge
+- https://github.com/BeitDina/VxKex
+- https://github.com/Aqua-Vision/MgKex
+- https://github.com/OneForgottenMan/VxKex
+- https://github.com/winrevive/project-2600
+- https://github.com/kernel-extenders/VxKex
+- https://github.com/NulAsh/VxKex
+- * If there is another repository that is not here, please let me know.
+
 # Goal
-## Collecting and merging all vxkex forks in one complete edition
+Collecting and merging all vxkex forks in one complete edition
 
 Introduction
 ============
