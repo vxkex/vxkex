@@ -1,5 +1,11 @@
 <h1>It is under development and not stable!</h1>
 
+# Changes
+## dotexe 1337 changes applied
+
+# Goal
+## Collecting and merging all vxkex forks in one complete edit
+
 Introduction
 ============
 
