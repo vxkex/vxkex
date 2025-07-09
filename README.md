@@ -5,7 +5,7 @@
 - https://github.com/tahaghafuri/vxkex changes merged.
 
 # Goal
-## Collecting and merging all vxkex forks in one complete edit
+## Collecting and merging all vxkex forks in one complete edition
 
 Introduction
 ============
