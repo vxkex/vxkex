@@ -13,6 +13,7 @@
 - https://github.com/kernel-extenders/VxKex
 - https://github.com/NulAsh/VxKex
 - https://github.com/tester9071348/VxKex-Extended
+- https://github.com/CopperFr/VxKex
 * If there is another repository that is not here, please let me know.
 
 # Goal
